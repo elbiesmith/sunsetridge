@@ -4,12 +4,24 @@ let outputArray = [];
 let customData = [];
 
 function checkArray() {
-    for (let i = 0; i < data.length; i++) {
-        if (data[i] > largest) {
-            largest = data[i];
-            outputArray.push(data[i]);
+    outputArray = [];
+    largest = 0;
+    if (customData == []) {
+        for (let i = 0; i < data.length; i++) {
+            if (data[i] > largest) {
+                largest = data[i];
+                outputArray.push(data[i]);
+            }
+        }
+    } else {
+        for (let i = 0; i < customData.length; i++) {
+            if (customData[i] > largest) {
+                largest = customData[i];
+                outputArray.push(customData[i]);
+            }
         }
     }
+
 
     displayArray();
 
@@ -41,13 +53,13 @@ function displayArray() {
     result.innerHTML += `]`;
 }
 
-function addValue(){
+function addValue() {
     let number = parseInt(document.getElementById('newNumber').value);
     let customDataForm = document.getElementById('customData');
-    
+
     // Add validation here
     customData.push(number);
-    customDataForm.innerHTML += number+",";
+    customDataForm.innerHTML += number + ",";
     resetForm();
 }
 
