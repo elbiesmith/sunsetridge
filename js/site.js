@@ -47,7 +47,7 @@ function addValue(){
     
     // Add validation here
     customData.push(number);
-    customDataForm.innerHTML += number;
+    customDataForm.innerHTML += number+",";
     resetForm();
 }
 
