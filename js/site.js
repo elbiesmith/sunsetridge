@@ -6,7 +6,7 @@ let customData = [];
 function checkArray() {
     outputArray = [];
     largest = 0;
-    if (customData == []) {
+    if (customData.length == 0) {
         for (let i = 0; i < data.length; i++) {
             if (data[i] > largest) {
                 largest = data[i];
