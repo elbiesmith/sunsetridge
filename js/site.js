@@ -33,14 +33,27 @@ function displayArray() {
     numberDisplay.innerHTML = '[';
     result.innerHTML = `${outputArray.length} => [`;
 
-    for (let i = 0; i < data.length; i++) {
-        if (i == 0) {
-            numberDisplay.innerHTML += `${data[i]}`;
-        } else {
-            numberDisplay.innerHTML += `, ${data[i]}`;
-        }
+    if (customData.length == 0) {
+        for (let i = 0; i < data.length; i++) {
+            if (i == 0) {
+                numberDisplay.innerHTML += `${data[i]}`;
+            } else {
+                numberDisplay.innerHTML += `, ${data[i]}`;
+            }
 
+        }
+    } else {
+        for (let i = 0; i < customData.length; i++) {
+            if (i == 0) {
+                numberDisplay.innerHTML += `${customData[i]}`;
+            } else {
+                numberDisplay.innerHTML += `, ${customData[i]}`;
+            }
+
+        }
     }
+
+
     numberDisplay.innerHTML += `]`;
 
     for (let i = 0; i < outputArray.length; i++) {
