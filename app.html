@@ -52,40 +52,53 @@
 
             <div class="row">
                 <div class="col text-center">
-                <h1 id="numberDisplay" class="border">NUMBERS GO HERE</h1>
-            </div>
+                    <h1 id="numberDisplay" class="border">NUMBERS GO HERE</h1>
+                </div>
             </div>
             <div class="row">
                 <div class="col">
-                <span id="result">   basic output    </span>
-                <button class="btn btn-primary float-end" id="btnCheckArray">Check Array</button>
-            </div>
+                    <span id="result"> basic output </span>
+                    <button class="btn btn-primary float-end" id="btnCheckArray">Check Array</button>
+                </div>
             </div>
             <div class="row">
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Advanced Options
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="row">
                                     <div class="col">
                                         <form id="arrayForm">
-                                            <label for="" class="form-label">Add Value to New Array</label>
-                                            
+                                            <label for="newNumber" class="form-label">Add Value to New Array</label>
+                                            <input type="number" class="form-control" name="newNumber" id="newNumber">
+                                            <button class="btn btn-primary float-end" type="button" id="btnAdd">Add to
+                                                Array</button>
                                         </form>
                                     </div>
-                                    <div class="col"></div>
+                                    <div class="col">
+                                        <div class="card mt-4">
+                                            <div class="card-body">
+                                                <p>[<span id="customData"></span>]</p>
+                                                <button class='btn btn-danger float-end' id="btnReset">Reset
+                                                    Data</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
+
             </div>
+        </div>
 
 
         </div>
@@ -122,16 +135,15 @@
     <script src="/js/site.js"></script>
     <script>
         document.getElementById("btnCheckArray").addEventListener("click", checkArray);
+        document.getElementById("btnAdd").addEventListener("click", addValue);
+        document.getElementById('btnReset').addEventListener('click', resetData);
 
-
-
-
-        // document.getElementById("addValue").addEventListener('keypress', function (keyPressed) {
+        // document.getElementById("newNumber").addEventListener('keypress', function (keyPressed) {
         //     if (keyPressed.key === "Enter") {
+                
         //         addValue();
         //     }
         // })
-        
     </script>
 
 </body>
