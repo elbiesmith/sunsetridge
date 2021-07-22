@@ -117,11 +117,7 @@ function resetForm() {
     document.getElementById('arrayForm').reset();
 }
 
-function colorize() {
-    for(let i = 0; i < data.length; i++){
-        
-    }
-}
+
 
 function undo(){
     //remove from array
