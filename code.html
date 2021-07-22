@@ -58,25 +58,23 @@
                         let outputArray = [];
                         let darkArray = [];
                         let customData = [];
-                        // let styledObj = new Map();
-
 
                         function checkArray() {
-
                             let largest = 0;
                             outputArray = [];
+                            darkArray = [];
+                            largest = 0;
                             if (customData.length == 0) {
                                 for (let i = 0; i &lt; data.length; i++) {
                                     if (data[i] &gt; largest) {
                                         largest = data[i];
                                         outputArray.push(data[i]);
-                                        // styledObj.set(data[i], 'light')
                                     } else {
                                         darkArray.push(data[i]);
-                                        // styledObj.set(data[i], 'dark')
                                     }
                                 }
                             } else {
+
                                 for (let i = 0; i &lt; customData.length; i++) {
                                     if (customData[i] &gt; largest) {
                                         largest = customData[i];
@@ -86,17 +84,13 @@
                                     }
                                 }
                             }
-
-
                             displayArray();
-
                         }
 
                         function displayArray() {
                             let numberDisplay = document.getElementById('numberDisplay');
                             let result = document.getElementById('result');
                             let resultDark = document.getElementById('resultDark');
-                            let resultBtn = document.getElementById('btnResultModal')
                             numberDisplay.innerHTML = '[';
                             result.innerHTML = `${outputArray.length} can see the light:&lt;br&gt; [`;
                             resultDark.innerHTML = `${darkArray.length} live in darkness:&lt;br&gt; [`;
@@ -141,14 +135,13 @@
                                 }
                             }
                             resultDark.innerHTML += `]`;
-
-                            resultBtn.click();
+                            openModal();
                         }
 
                         function addValue() {
                             let number = parseInt(document.getElementById('newNumber').value);
                             let customDataForm = document.getElementById('customData');
-                            if (isNaN(number) || number&lt;1) {
+                            if (isNaN(number) || number &lt; 1) {
                                 Swal.fire({
                                     icon: 'error',
                                     title: 'Oops...',
@@ -186,6 +179,11 @@
                             let customDataOutput = document.getElementById('customData');
                             customDataOutput.innerHTML = '';
                             customDataOutput.innerHTML = newOutput;
+                        }
+
+                        function openModal(){
+                            let modal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
+                            modal.show();
                         }
                     </code>
                     </pre>
