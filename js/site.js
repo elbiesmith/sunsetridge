@@ -2,7 +2,7 @@ let data = [3, 2, 4, 7, 6, 9];
 let largest = 0;
 let outputArray = [];
 let customData = [];
-let styledObj = {};
+let styledObj = new Map();
 
 
 function checkArray() {
@@ -13,9 +13,9 @@ function checkArray() {
             if (data[i] > largest) {
                 largest = data[i];
                 outputArray.push(data[i]);
-                styledObj[data[i]] = `${i}light`;
+                styledObj.set(data[i], 'light')
             } else {
-                styledObj[data[i]] = `${i}dark`;
+                styledObj.set(data[i], 'dark')
             }
         }
     } else {
