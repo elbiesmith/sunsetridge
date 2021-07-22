@@ -1,5 +1,4 @@
 let data = [3, 2, 4, 7, 6, 9];
-let largest = 0;
 let outputArray = [];
 let darkArray = [];
 let customData = [];
@@ -7,7 +6,9 @@ let customData = [];
 
 
 function checkArray() {
+    let largest = 0;
     outputArray = [];
+    darkArray = [];
     largest = 0;
     if (customData.length == 0) {
         for (let i = 0; i < data.length; i++) {
@@ -21,6 +22,7 @@ function checkArray() {
             }
         }
     } else {
+
         for (let i = 0; i < customData.length; i++) {
             if (customData[i] > largest) {
                 largest = customData[i];
@@ -33,14 +35,12 @@ function checkArray() {
 
 
     displayArray();
-
 }
 
 function displayArray() {
     let numberDisplay = document.getElementById('numberDisplay');
     let result = document.getElementById('result');
     let resultDark = document.getElementById('resultDark');
-    let resultBtn = document.getElementById('btnResultModal')
     numberDisplay.innerHTML = '[';
     result.innerHTML = `${outputArray.length} can see the light:<br> [`;
     resultDark.innerHTML = `${darkArray.length} live in darkness:<br> [`;
@@ -85,14 +85,13 @@ function displayArray() {
         }
     }
     resultDark.innerHTML += `]`;
-
-    resultBtn.click();
+    openModal();
 }
 
 function addValue() {
     let number = parseInt(document.getElementById('newNumber').value);
     let customDataForm = document.getElementById('customData');
-    if (isNaN(number) || number<1) {
+    if (isNaN(number) || number < 1) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -117,8 +116,6 @@ function resetForm() {
     document.getElementById('arrayForm').reset();
 }
 
-
-
 function undo(){
     //remove from array
     customData.pop();
@@ -132,4 +129,10 @@ function undo(){
     let customDataOutput = document.getElementById('customData');
     customDataOutput.innerHTML = '';
     customDataOutput.innerHTML = newOutput;
+}
+
+function openModal(){
+    let modal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
+    modal.show();
+
 }

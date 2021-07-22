@@ -48,71 +48,74 @@
 
     <main class="flex-shrink-0">
         <div class="container">
-            <div class="row">
-                <div class="col-6 border-end border-2 p-4">
-                    <div class="row row-sizer">
+            <div class="card mt-6">
+              <div class="card-body  bg-light">
+                <div class="row">
+                    <div class="col-6 border-end border-2 p-4">
+                        <div class="row row-sizer">
 
-                        <h3 class="border-bottom">Sunset Ridge: A coding challenge.</h3>
-                        <p>An array of mountains is facing the sun. The
-                            heights of each mountain from West to East is
-                            given in an integer array. You have to tell which
-                            mountain will be able to see the sunset.
-                            Write a program that prints how many mountains
-                            and which mountains will be able to see the
-                            Sunset given the Array [3, 2, 4, 7, 6, 9].
-                        </p>
-                        <h3 class="border-bottom">Instructions</h3>
-                        <p>
-                            If you just want to use the default array, click the Check Array Button.
-                            For a custom array of ANY length, click use custom array, and input your
-                            numbers into the input box. Then either click Add or press enter to add
-                            your number to the array.
-                        </p>
+                            <h3 class="border-bottom">Sunset Ridge: A coding challenge.</h3>
+                            <p>An array of mountains is facing the sun. The
+                                heights of each mountain from West to East is
+                                given in an integer array. You have to tell which
+                                mountain will be able to see the sunset.
+                                Write a program that prints how many mountains
+                                and which mountains will be able to see the
+                                Sunset given the Array [3, 2, 4, 7, 6, 9].
+                            </p>
+                            <h3 class="border-bottom">Instructions</h3>
+                            <p>
+                                If you just want to use the default array, click the Check Array Button.
+                                For a custom array of ANY length, click use custom array, and input your
+                                numbers into the input box. Then either click Add or press enter to add
+                                your number to the array.
+                            </p>
 
-                        <p>If you make a mistake, click Undo to undo the last
-                            number entered or Reset to clear the whole array.
-                        </p>
+                            <p>If you make a mistake, click Undo to undo the last
+                                number entered or Reset to clear the whole array.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col p-4">
-                    <div class="row row-sizer text-center pb-5">
-                        <h4>[3, 2, 4, 7, 6, 9]</h4>
-                        <p> default array</p>
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Use Custom Array
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div class="row">
+                    <div class="col p-4">
+                        <div class="row row-sizer text-center pb-5">
+                            <h4>[3, 2, 4, 7, 6, 9]</h4>
+                            <p> default array</p>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Use Custom Array
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="row">
 
-                                            <div class="col">
-                                                <div class="card mt-4">
-                                                    <div class="card-body">
-                                                        <form id="arrayForm">
+                                                <div class="col">
+                                                    <div class="card mt-4">
+                                                        <div class="card-body">
+                                                            <form id="arrayForm" class="mt-4">
                                                             
-                                                            <input type="number" class="form-control" id="newNumber">
-                                                            <label class="form-label float-start">Add Value</label>
-                                                            <button class="btn btn-primary float-end mt-2" type="button"
-                                                                id="btnAdd">Add</button>
-                                                        </form>
+                                                                <input type="number" class="form-control" id="newNumber">
+                                                                <label class="form-label float-start">Add Value</label>
+                                                                <button class="btn btn-primary float-end mt-2" type="button"
+                                                                    id="btnAdd">Add</button>
+                                                            </form>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="card mt-7">
-                                                    <div class="card-body text-center">
-                                                        <h5>Custom Array</h5>
-                                                        <p class="">[<span id="customData"></span>]</p>
-                                                        <button class='btn btn-warning mt-4 float-start'
-                                                        id="btnUndo">Undo</button>
-                                                        <button class='btn btn-danger mt-4 float-end'
-                                                        id="btnReset">Reset</button>
+                                                <div class="col-6">
+                                                    <div class="card mt-7">
+                                                        <div class="card-body text-center">
+                                                            <h5 class="">Custom Array</h5>
+                                                            <p class="">[<span id="customData"></span>]</p>
+                                                            <button class='btn btn-warning mt-4 float-start'
+                                                            id="btnUndo">Undo</button>
+                                                            <button class='btn btn-danger mt-4 float-end'
+                                                            id="btnReset">Reset</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -120,31 +123,24 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
-                    <div class="row">
-                        <div class="col ">
+                        </div>
+                        <div class="row">
+                            <div class="col ">
 
-                            <button class="btn btn-primary float-end " id="btnCheckArray">Check Array</button>
+                                <button class="btn btn-primary float-end " id="btnCheckArray">Check Array</button>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-
+              </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col border-top mt-2 text-center">
-                <img src="/img/sunsetridge.jpg" class="rounded img-fluid mt-2" alt="">
-            </div>
-        </div>
-        </div>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary visually-hidden" id="btnResultModal" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
-            Launch demo modal
-        </button>
+            
 
+        </div>
+
+        
         <!-- Modal -->
         <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">

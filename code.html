@@ -55,7 +55,6 @@
                     <pre class="line-numbers language-javascript">
                     <code class="language-javascript">
                         let data = [3, 2, 4, 7, 6, 9];
-                        let largest = 0;
                         let outputArray = [];
                         let darkArray = [];
                         let customData = [];
@@ -63,8 +62,9 @@
 
 
                         function checkArray() {
+
+                            let largest = 0;
                             outputArray = [];
-                            largest = 0;
                             if (customData.length == 0) {
                                 for (let i = 0; i &lt; data.length; i++) {
                                     if (data[i] &gt; largest) {
