@@ -52,3 +52,11 @@
         bottom: 0;
         width: 100%;
     }
+    .mb-6 {
+        margin-bottom: 6rem;
+    }
+
+    #robot {
+        max-height: 20rem;
+        max-width: 30rem;
+    }
