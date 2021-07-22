@@ -2,6 +2,8 @@ let data = [3, 2, 4, 7, 6, 9];
 let largest = 0;
 let outputArray = [];
 let customData = [];
+let styledObj = {};
+
 
 function checkArray() {
     outputArray = [];
@@ -11,6 +13,9 @@ function checkArray() {
             if (data[i] > largest) {
                 largest = data[i];
                 outputArray.push(data[i]);
+                styledObj[data[i]] = 'light';
+            } else {
+                styledObj[data[i]] = 'dark'
             }
         }
     } else {
@@ -92,4 +97,10 @@ function resetData() {
 
 function resetForm() {
     document.getElementById('arrayForm').reset();
+}
+
+function colorize() {
+    for(let i = 0; i < data.length; i++){
+        
+    }
 }
