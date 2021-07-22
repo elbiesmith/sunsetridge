@@ -69,11 +69,19 @@ function displayArray() {
 function addValue() {
     let number = parseInt(document.getElementById('newNumber').value);
     let customDataForm = document.getElementById('customData');
-
-    // Add validation here
-    customData.push(number);
-    customDataForm.innerHTML += number + ",";
-    resetForm();
+    if (isNaN(number)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please enter a number.'
+        })
+        resetForm();
+    } else {
+        // Add validation here
+        customData.push(number);
+        customDataForm.innerHTML += number + ",";
+        resetForm();
+    }
 }
 
 function resetData() {
