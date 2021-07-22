@@ -13,9 +13,9 @@ function checkArray() {
             if (data[i] > largest) {
                 largest = data[i];
                 outputArray.push(data[i]);
-                styledObj[data[i]] = 'light';
+                styledObj[data[i]] = `${i}light`;
             } else {
-                styledObj[data[i]] = 'dark'
+                styledObj[data[i]] = `${i}dark`;
             }
         }
     } else {
