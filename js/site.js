@@ -9,7 +9,6 @@ function checkArray() {
     let largest = 0;
     outputArray = [];
     darkArray = [];
-    largest = 0;
     if (customData.length == 0) {
         for (let i = 0; i < data.length; i++) {
             if (data[i] > largest) {
@@ -116,13 +115,13 @@ function resetForm() {
     document.getElementById('arrayForm').reset();
 }
 
-function undo(){
+function undo() {
     //remove from array
     customData.pop();
-    
+
     // update screen
     let newOutput = '';
-    for (let i = 0; i < customData.length; i++){
+    for (let i = 0; i < customData.length; i++) {
         newOutput += `${customData[i]},`
     }
 
@@ -131,7 +130,7 @@ function undo(){
     customDataOutput.innerHTML = newOutput;
 }
 
-function openModal(){
+function openModal() {
     let modal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
     modal.show();
 

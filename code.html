@@ -63,7 +63,6 @@
                             let largest = 0;
                             outputArray = [];
                             darkArray = [];
-                            largest = 0;
                             if (customData.length == 0) {
                                 for (let i = 0; i &lt; data.length; i++) {
                                     if (data[i] &gt; largest) {
@@ -111,7 +110,6 @@
                                     } else {
                                         numberDisplay.innerHTML += `, ${customData[i]}`;
                                     }
-
                                 }
                             }
                             numberDisplay.innerHTML += `]`;
@@ -166,13 +164,13 @@
                             document.getElementById('arrayForm').reset();
                         }
 
-                        function undo(){
+                        function undo() {
                             //remove from array
                             customData.pop();
-    
+
                             // update screen
                             let newOutput = '';
-                            for (let i = 0; i &lt; customData.length; i++){
+                            for (let i = 0; i &lt; customData.length; i++) {
                                 newOutput += `${customData[i]},`
                             }
 
@@ -181,15 +179,47 @@
                             customDataOutput.innerHTML = newOutput;
                         }
 
-                        function openModal(){
+                        function openModal() {
                             let modal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
                             modal.show();
+
                         }
                     </code>
                     </pre>
                 </div>
                 <div class="col">
-                    Code explanaition goes here
+                    <div class="card border-dark mt-2 text-danger ">
+                        <div class="card-body bg-dark text-light rounded rBorder">
+                            <p>Sunset Ridge operates on 3 main functions</p>
+                            <h3>checkArray</h3>
+                            <p class="card-text">Basic funcionality is achieved by using a for loop to Check the height of each
+                                mountain.  I've preset the highest mountain to be size 0. I loop throught the 
+                                Array and compare it to my largest number.  Loop 1 will always be larger than 0, so
+                                largest is set to the value of index 0.  Each loop through, if the value is greater
+                                than the largest number, reasign largest and add it to my output array. I add the numbers that aren't large enough to see
+                                the sun to another array for output later.
+                            </p>
+                            <p>
+                                As a little extra functionality, I've added in the option for a custom array. If 
+                                the custom array is empty, use the default data, otherwhise use the custom data.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card border-dark mt-2">
+                        <div class="card-body bg-dark rounded rBorder">
+                            <h3>checkArray</h3>
+                        </div>
+                    </div>
+                    <div class="card border-dark mt-2">
+                        <div class="card-body bg-dark rounded rBorder">
+                            <h3>checkArray</h3>
+                        </div>
+                    </div>
+                    <div class="card border-dark mt-2">
+                        <div class="card-body bg-dark rounded rBorder">
+                            <h3>checkArray</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
 

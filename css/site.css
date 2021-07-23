@@ -72,3 +72,10 @@
         margin-top: 10rem;
     }
 
+    .rBorder {
+        border: none !important;
+
+    }
+    .textColor {
+        color: red;
+    }
