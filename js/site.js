@@ -14,10 +14,10 @@ function checkArray() {
             if (data[i] > largest) {
                 largest = data[i];
                 outputArray.push(data[i]);
-                // styledObj.set(data[i], 'light')
+                
             } else {
                 darkArray.push(data[i]);
-                // styledObj.set(data[i], 'dark')
+                
             }
         }
     } else {
